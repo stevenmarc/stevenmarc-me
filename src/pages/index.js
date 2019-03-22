@@ -1,12 +1,25 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
 import anime from "animejs"
 
-const fade = keyframes`
-from {opacity:0;}
-to {opacity:1}
-`
-const name = "Steven-Marc Couchouron"
+const backgroundImage = require("../assets/images/steven_bg.jpg")
+const bgImageStyle = {
+  minHeight: "100%",
+  minWidth: 200,
+
+  /* Set up proportionate scaling */
+  width: "100%",
+  height: "auto",
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  position: "fixed",
+  top: 0,
+  left: 0,
+  zIndex: -1,
+}
+
+const name = "STEVEN-MARC COUCHOURON"
 
 const WrapLetters = str => {
   return str
@@ -16,42 +29,48 @@ const WrapLetters = str => {
 
 const wrappedLetters = [WrapLetters(name)]
 
-const NameTitle = styled.div`
-  font-weight: 900;
-  font-size: 3.5em;
-  opacity: 0;
-  animation: ${fade} 3s ease-in-out 1s;
-  animation-fill-mode: forwards;
-`
-
 class App extends React.Component {
   componentDidMount() {
-    anime
-      .timeline({ loop: true })
-      .add({
-        targets: ".ml3 .letter",
-        opacity: [0, 1],
-        easing: "easeInOutQuad",
-        duration: 2250,
-        delay: function(el, i) {
-          return 150 * (i + 1)
-        },
-      })
-      .add({
-        targets: ".ml3",
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000,
-      })
+    anime.timeline({ loop: false }).add({
+      targets: ".ml3 .letter",
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 2000,
+      delay: function(el, i) {
+        return 150 * (i + 1)
+      },
+    })
   }
 
   render() {
     return (
-      <h1
-        className="ml3"
-        dangerouslySetInnerHTML={{ __html: wrappedLetters }}
-      />
+      <div className="cComponent" style={bgImageStyle}>
+        <h1
+          className="ml3"
+          style={{
+            fontFamily: "Relevant,Helvetica,Arial,sans-serif",
+            fontWeight: 100,
+            fontSize: "2em",
+            padding: "40px 20px 0px 40px",
+            color: "white",
+          }}
+          dangerouslySetInnerHTML={{ __html: wrappedLetters }}
+        />
+        <h2
+          style={{
+            fontFamily: "Relevant,Helvetica,Arial,sans-serif",
+            fontWeight: "lighter",
+            fontSize: "1.5em",
+            padding: "0px 20px 20px 40px",
+            color: "white",
+          }}
+        >
+          Freelance developer, writer and filmmaker. <br />I love finding
+          creative solutions with clients <br />
+          to help them connect with their audience, <br />
+          wether it be by code, text, or moving images.
+        </h2>
+      </div>
     )
   }
 }
