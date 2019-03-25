@@ -4,20 +4,18 @@ import { Helmet } from "react-helmet"
 
 const backgroundImage = require("../assets/images/steven_bg.jpg")
 const bgImageStyle = {
-  minHeight: "100%",
+  minHeight: "100vh",
   minWidth: 200,
-
-  /* Set up proportionate scaling */
   width: "100%",
   height: "auto",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundPosition: "center",
+  backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  position: "fixed",
-  top: 0,
-  left: 0,
-  zIndex: -1,
+  backgroundAttachment: "fixed",
+  display: "grid",
+  gridTemplateColumns: "minmax(200px, 600px) 1fr",
+  gridTemplateRows: "300px auto",
 }
 
 const name = "STEVEN-MARC COUCHOURON"
@@ -45,44 +43,56 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="application">
+      <React.Fragment>
         <Helmet>
           <meta charSet="utf-8" />
           <title>stevenmarc.me</title>
           <link rel="canonical" href="http://stevenmarc.me" />
           <link
-            href="https://fonts.googleapis.com/css?family=Raleway|Roboto:100"
+            href="https://fonts.googleapis.com/css?family=Roboto:100:Quicksand:300"
             rel="stylesheet"
           />
+          <style type="text/css">{`body { margin: 0; }`}</style>
         </Helmet>
-        <div className="cComponent" style={bgImageStyle}>
-          <h1
-            className="ml3"
-            style={{
-              fontFamily: "Raleway, sans-serif",
-              fontWeight: 100,
-              fontSize: "2em",
-              padding: "180px 20px 0px 40px",
-              color: "white",
-            }}
-            dangerouslySetInnerHTML={{ __html: wrappedLetters }}
-          />
-          <h2
-            style={{
-              fontFamily: "Roboto, sans-serif",
-              fontWeight: 100,
-              fontSize: "1.5em",
-              padding: "0px 20px 20px 40px",
-              color: "white",
-            }}
-          >
-            Freelance developer, writer and filmmaker. <br />I love finding
-            creative solutions with clients <br />
-            to help them connect with their audience, <br />
-            whether it be by code, text, or moving images.
-          </h2>
+
+        <div style={bgImageStyle}>
+          <div>
+            <h1
+              className="ml3"
+              style={{
+                fontFamily: "Quicksand, sans-serif",
+                fontWeight: 300,
+                fontSize: "2em",
+                padding: "180px 20px 0px 40px",
+                color: "white",
+              }}
+              dangerouslySetInnerHTML={{ __html: wrappedLetters }}
+            />
+          </div>
+          <div />
+
+          <div>
+            <h2
+              style={{
+                fontFamily: "Roboto, sans-serif",
+                fontWeight: 100,
+                fontSize: "1.5em",
+                padding: "0px 20px 20px 40px",
+                color: "white",
+              }}
+            >
+              Freelance developer, writer and filmmaker. <br />I love finding
+              <span style={{ color: "#ea7623" }}> creative solutions </span>
+              with clients to help them connect with their
+              <span style={{ color: "#ea7623" }}> audience</span>, whether it be
+              by code, text, or moving images. I also help with
+              <span style={{ color: "#ea7623" }}> digital strategy </span>and
+              marketing.
+            </h2>
+          </div>
+          <div />
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
