@@ -9,7 +9,7 @@ const bgImageStyle = {
   width: "100%",
   height: "auto",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundPosition: "center center",
+  backgroundPosition: "60% 0",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
@@ -81,7 +81,10 @@ class App extends React.Component {
                 color: "white",
               }}
             >
-              Freelance developer, writer and filmmaker. <br />I love finding
+              Freelance <span style={{ color: "#ea7623" }}> developer</span>,{" "}
+              <span style={{ color: "#ea7623" }}> writer </span> and{" "}
+              <span style={{ color: "#ea7623" }}> filmmaker</span>. <br />I love
+              finding
               <span style={{ color: "#ea7623" }}> creative solutions </span>
               with clients to help them connect with their
               <span style={{ color: "#ea7623" }}> audience</span>, whether it be
