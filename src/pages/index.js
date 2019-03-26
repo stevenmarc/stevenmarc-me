@@ -1,6 +1,8 @@
 import React from "react"
 import anime from "animejs"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const backgroundImage = require("../assets/images/steven_bg.jpg")
 const bgImageStyle = {
@@ -43,7 +45,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <Layout>
         <Helmet>
           <meta charSet="utf-8" />
           <title>stevenmarc.me</title>
@@ -52,7 +54,6 @@ class App extends React.Component {
             href="https://fonts.googleapis.com/css?family=Roboto:100:Quicksand:300"
             rel="stylesheet"
           />
-          <style type="text/css">{`body { margin: 0; }`}</style>
         </Helmet>
 
         <div style={bgImageStyle}>
@@ -69,7 +70,18 @@ class App extends React.Component {
               dangerouslySetInnerHTML={{ __html: wrappedLetters }}
             />
           </div>
-          <div />
+          <Link
+            style={{
+              fontFamily: "Quicksand, sans-serif",
+              fontWeight: 300,
+              fontSize: "1em",
+              padding: "180px 20px 0px 40px",
+              color: "white",
+            }}
+            to="/portfolio"
+          >
+            Portfolio
+          </Link>
 
           <div>
             <h2
@@ -95,7 +107,7 @@ class App extends React.Component {
           </div>
           <div />
         </div>
-      </React.Fragment>
+      </Layout>
     )
   }
 }
