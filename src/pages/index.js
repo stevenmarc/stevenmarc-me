@@ -70,18 +70,7 @@ class App extends React.Component {
               dangerouslySetInnerHTML={{ __html: wrappedLetters }}
             />
           </div>
-          <Link
-            style={{
-              fontFamily: "Quicksand, sans-serif",
-              fontWeight: 300,
-              fontSize: "1em",
-              padding: "180px 20px 0px 40px",
-              color: "white",
-            }}
-            to="/portfolio"
-          >
-            Portfolio
-          </Link>
+          <div />
 
           <div>
             <h2

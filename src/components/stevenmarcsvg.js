@@ -6,12 +6,13 @@ const SvgComponent = props => (
       transform="translate(16.016 33.031)"
       fontSize={32}
       fontFamily="Quicksand-Regular"
+      fill="#FFF"
     >
       {"stevenmarc"}
     </text>
     <path
       fill="none"
-      stroke="#000"
+      stroke="#FFF"
       strokeWidth={2}
       strokeMiterlimit={10}
       d="M108 14V1H1v47h107V36"
