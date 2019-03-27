@@ -1,14 +1,15 @@
-import React from "react"
+import React from 'react'
 
 const SvgComponent = props => (
   <svg viewBox="0 0 201 49" {...props}>
     <text
+      className="logotext"
       transform="translate(16.016 33.031)"
       fontSize={32}
       fontFamily="Quicksand-Regular"
       fill="#FFF"
     >
-      {"stevenmarc"}
+      {'stevenmarc'}
     </text>
     <path
       fill="none"

@@ -18,3 +18,7 @@ a {
 a:hover {
   color: #ea7623;
 }
+
+.logotext:hover {
+  fill: #ea7623;
+}
