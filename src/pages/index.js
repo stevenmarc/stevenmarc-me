@@ -48,7 +48,7 @@ class App extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>stevenmarc.me</title>
-          <link rel="canonical" href="http://stevenmarc.me" />
+          <link rel="canonical" href="https://stevenmarc.me" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100:Quicksand:300"
             rel="stylesheet"
