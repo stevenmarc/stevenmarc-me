@@ -13,10 +13,9 @@ export default ({ children }) => (
     style={{
       margin: `0`,
       padding: `0`,
-      backgroundColor: "#FFFFFF",
     }}
   >
-    <header style={{ marginBottom: `1.5rem`, position: "fixed" }}>
+    <header style={{ marginBottom: `1.5rem`, position: "fixed", width: "90%" }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
         <StevenmarcSvg style={{ display: `inline`, width: 120, padding: 10 }} />
       </Link>
