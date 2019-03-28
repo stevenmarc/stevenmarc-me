@@ -1,10 +1,9 @@
 import React from 'react'
 import GridLayout from 'react-grid-layout'
 import Layout from '../components/layout'
-import Header from '../components/header'
-import Image1 from './../assets/images/image1.jpg'
-import Image2 from './../assets/images/image2.jpg'
-import Image3 from './../assets/images/image3.jpg'
+import Image1 from './../images/image1.jpg'
+import Image2 from './../images/image2.jpg'
+import Image3 from './../images/image3.jpg'
 
 class portfolioIndex extends React.Component {
   render() {
