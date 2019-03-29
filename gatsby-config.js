@@ -1,4 +1,4 @@
-import manifestConfig from './manifest-config'
+const manifestConfig = require('./manifest-config')
 
 module.exports = {
   siteMetadata: {
@@ -20,6 +20,21 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
         name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`100`],
+          },
+          {
+            family: `Quicksand`,
+            variants: [`300`],
+          },
+        ],
       },
     },
   ],
