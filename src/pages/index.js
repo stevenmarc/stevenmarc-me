@@ -77,11 +77,12 @@ class App extends React.Component {
                 color: 'white',
               }}
             >
-              Freelance <span style={{ color: '#ea7623' }}> developer</span>,{' '}
-              <span style={{ color: '#ea7623' }}> writer </span> and{' '}
+              Freelance{' '}
+              <span style={{ color: 'rgba(209, 100, 16, 1)' }}> developer</span>
+              , <span style={{ color: '#ea7623' }}> writer </span> and{' '}
               <span style={{ color: '#ea7623' }}> filmmaker</span>. <br />I love
               finding
-              <span style={{ color: '#ea7623' }}> creative solutions </span>
+              <span style={{ color: '#ff7733' }}> creative solutions </span>
               with clients to help them connect with their
               <span style={{ color: '#ea7623' }}> audience</span>, whether it be
               by code, text, or moving images. I also help with

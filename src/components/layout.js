@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './header'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import colors from '../../colors'
+import Archive from '../pages/archive'
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -42,5 +43,6 @@ export default ({ children }) => (
     <GlobalStyle />
     <Header />
     {children}
+    <Archive />
   </div>
 )
