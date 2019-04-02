@@ -1,8 +1,10 @@
-import React from 'react'
-import Header from './header'
-import { createGlobalStyle } from 'styled-components'
+import React, { Fragment } from 'react'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import PropTypes from 'prop-types'
+import { ScrollingProvider } from 'react-scroll-section'
+import config from 'react-reveal/globals'
 import colors from '../../colors'
-import Archive from '../pages/archive'
+import Header from './Header'
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -38,11 +40,22 @@ a:hover {
 }
 `
 
-export default ({ children }) => (
-  <div>
+config({ ssrFadeout: true })
+
+const Layout = ({ children }) => (
+  <Fragment>
     <GlobalStyle />
-    <Header />
-    {children}
-    <Archive />
-  </div>
+    <ThemeProvider theme={{ colors }}>
+      <ScrollingProvider>
+        <Header />
+        {children}
+      </ScrollingProvider>
+    </ThemeProvider>
+  </Fragment>
 )
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default Layout

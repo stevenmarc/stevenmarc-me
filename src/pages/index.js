@@ -1,7 +1,8 @@
 import React from 'react'
 import anime from 'animejs'
 import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import Header from '../components/Header'
 
 const backgroundImage = require('../images/steven_bg.jpg')
 const bgImageStyle = {
@@ -51,6 +52,7 @@ class App extends React.Component {
           <link rel="canonical" href="https://stevenmarc.me" />
         </Helmet>
 
+        <Header />
         <div style={bgImageStyle}>
           <div>
             <h1

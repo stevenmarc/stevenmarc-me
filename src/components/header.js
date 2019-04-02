@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import StevenmarcSvg from './stevenmarcsvg'
+import StevenmarcSvg from './StevenmarcSvg'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, scrollMarginRight: `1rem` }}>
